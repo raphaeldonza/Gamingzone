@@ -1,94 +1,52 @@
 <main>
 
-    <section id="section-banner">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/img/Destaque.png" class="d-block w-100" alt="Jogos em destaque">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/img/banner2.PNG" class="d-block w-100" alt="O melhor suporte do mercado">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/img/Preço.png" class="d-block w-100" alt="Os melhores preços">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+  <section id="section-banner">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/img/Destaque.png" class="d-block w-100" alt="Jogos em destaque">
         </div>
-    </section>
+        <div class="carousel-item">
+          <img src="./assets/img/banner2.PNG" class="d-block w-100" alt="O melhor suporte do mercado">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/img/Preço.png" class="d-block w-100" alt="Os melhores preços">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
 
-    <h2>Jogos em Promoção</h2>
-    <mat-grid-list cols="3">
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/Corrida.png" alt="Super fórmula">
-        
-                <mat-card-header>
-                  <mat-card-title>Super Fórmula</mat-card-title>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    Ganhador do melhor jogo de corrida do ano.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <p>R$ 89,99</p>
-                  <button mat-button>Comprar</button>
-                </mat-card-actions>
-              </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/jogo2.PNG" alt="O Herói">
-        
-                <mat-card-header>
-                  <mat-card-title>O Herói</mat-card-title>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    Um jogo de plataforma amado pela crítica.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <p>R$ 59,99</p>
-                  <button mat-button>Comprar</button>
-                </mat-card-actions>
-              </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/Luta.png" alt="Super Fight">
-        
-                <mat-card-header>
-                  <mat-card-title>Super Fight</mat-card-title>
-                </mat-card-header>
-                
-                <mat-card-content>
-                  <p>
-                    A maior surpresa de jogo de luta do último ano.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <p>R$ 120,00</p>
-                  <button mat-button>Comprar</button>
-                </mat-card-actions>
-              </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-      
-
-       
+  <h2>Jogos em Promoção</h2>
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let produto of produtos">
+      <mat-card class="example-card">
+        <img mat-card-image src="./assets/img/{{produto.foto}}" alt="produto">
+        <mat-card-header>
+          <mat-card-title>{{produto.produto}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{produto.descricao}}
+          </p>
+          <p>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>{{produto.preco | currency : 'BRL'}}</p>
+          <button mat-raised-button color="primary">Comprar</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 
 
 

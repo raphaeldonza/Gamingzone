@@ -1,0 +1,32 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "Super Fórmula",
+      "descricao": "Ganhador do melhor jogo de corrida do ano",
+      "foto": "jogo1.png",
+      "preco": 200
+    },
+    {
+      "id": 2,
+      "produto": "O Herói",
+      "descricao": "Um jogo de plataforma amado pela crítica",
+      "foto": "jogo2.PNG",
+      "preco": 200
+    },
+    {
+      "id": 3,
+      "produto": "Super Fight",
+      "descricao": "A maior surpresa de jogo de luta do último ano",
+      "foto": "jogo3.png",
+      "preco": 100
+    },
+    {
+      "id": 4,
+      "produto": "jogo 5",
+      "descricao": "arquivo editado",
+      "foto": "jogo1.png",
+      "preco": 200
+    }
+  ]
+}
